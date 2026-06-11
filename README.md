@@ -34,7 +34,7 @@ GitHub Push (main)
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/MesumHussyn1899/2212185-devops-project.git
+git clone https://github.com/hussainmesum8/2212185-devops-project.git
 cd 2212185-devops-project
 
 # 2. Create your .env file
@@ -107,7 +107,7 @@ sudo usermod -aG docker ubuntu
 ### 3. Clone the repository and start production containers
 
 ```bash
-git clone https://github.com/MesumHussyn1899/2212185-devops-project.git ~/devops-project
+git clone https://github.com/hussainmesum8/2212185-devops-project.git ~/devops-project
 cd ~/devops-project
 cp .env.example .env   # Edit with production database credentials
 docker compose -f docker-compose.prod.yml up -d --build
