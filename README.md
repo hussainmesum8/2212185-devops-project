@@ -167,3 +167,5 @@ pytest app/tests/ -v
 ---
 
 *DevOps Fundamentals — Final Project*
+
+![CI](https://github.com/hussainmesum8/2212185-devops-project/actions/workflows/ci.yml/badge.svg)
