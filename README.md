@@ -51,6 +51,7 @@ curl http://localhost:8000/students
 
 ---
 
+> **Interactive API docs:** Visit `http://localhost:8000/docs` (Swagger UI) or `http://localhost:8000/redoc` (ReDoc).n
 ## API Endpoints
 
 | Method | Endpoint             | Description                                 |
