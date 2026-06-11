@@ -170,3 +170,4 @@ pytest app/tests/ -v
 *DevOps Fundamentals — Final Project*
 
 ![CI](https://github.com/hussainmesum8/2212185-devops-project/actions/workflows/ci.yml/badge.svg)
+# Live URL: http://54.90.246.103:8000
