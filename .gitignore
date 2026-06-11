@@ -14,6 +14,8 @@ build/
 .pytest_cache/
 .coverage
 htmlcov/
+.venv/
+venv/
 
 # SQLite test DB
 test.db
