@@ -1,12 +1,21 @@
+from contextlib import asynccontextmanager
+
 from fastapi import FastAPI, HTTPException, Depends
 from sqlalchemy.orm import Session
-from . import models, database
-from .database import engine
 from pydantic import BaseModel
 
-models.Base.metadata.create_all(bind=engine)
+from . import models, database
+from .database import engine
 
-app = FastAPI(title="DevOps Project", version="1.0.0")
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """Create database tables on startup."""
+    models.Base.metadata.create_all(bind=engine)
+    yield
+
+
+app = FastAPI(title="DevOps Project", version="1.0.0", lifespan=lifespan)
 
 
 # ── Pydantic schemas ─────────────────────────────────────
@@ -20,8 +29,7 @@ class StudentCreate(BaseModel):
 class StudentResponse(StudentCreate):
     id: int
 
-    class Config:
-        from_attributes = True
+    model_config = {"from_attributes": True}
 
 
 # ── Dependency ────────────────────────────────────────────
@@ -45,7 +53,7 @@ def health(db: Session = Depends(get_db)):
     return {
         "status": "ok",
         "db": db_status,
-        "student": "2212185",   # <-- Mohammad Mesum Hussain
+        "student": "2212185",   # Mohammad Mesum Hussain
     }
 
 
