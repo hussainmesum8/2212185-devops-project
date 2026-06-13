@@ -3,7 +3,7 @@
 > **Student:** Mohammad Mesum Hussain  
 > **Registration Number:** 2212185  
 > **Course:** DevOps Fundamentals  
-> **Live URL:** http://YOUR_EC2_IP:8000
+> **Live URL:** http://54.172.54.35:8000
 
 ---
 
